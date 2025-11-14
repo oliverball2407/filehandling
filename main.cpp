@@ -33,11 +33,12 @@ void task2() {
 
 			std::istringstream ss(line);
 			std::getline(ss, name, ','); //this gets:    name: "Alice"
+
 			
 			
+			
+			name = name.substr(name.find(":") + 3, name.length() - name.find(":") - 4); //the 4 ignores 
 			cout << name;
-			name = name.substr(name.find(":") + 3, name.length() - name.find(":"));
-			
 
 
 		}
